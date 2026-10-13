@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Auditing the Objective: a technical report on multi-objective bandits, engagement-based recommendation systems, and a reproducible audit protocol.">
+  <meta name="theme-color" content="#f6f7f9">
+  <title>Auditing the Objective — Recommendation System Audit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#"><span class="brand-mark" aria-hidden="true">a/o</span><span>Recommendation<br>System Audit</span></a>
+    <nav aria-label="Main navigation"><a href="#framework">Framework</a><a href="#results">Results</a><a href="#authors">Authors</a><a class="nav-paper" href="paper.pdf">Read paper <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> Technical report <span class="divider">/</span> August 2026</p>
+        <h1 id="title">Auditing<br>the <em>Objective.</em></h1>
+        <p class="subtitle">A Multi-Objective Bandit Framework and Reproducible Audit Protocol for Engagement-Based Recommendation Systems</p>
+        <p class="hero-description">Making the trade-offs behind recommendation systems explicit, measurable, and auditable.</p>
+        <div class="actions"><a class="button primary" href="paper.pdf">Read the paper <span aria-hidden="true">↗</span></a><a class="button secondary" href="#framework">Explore the framework <span aria-hidden="true">↓</span></a></div>
+        <p class="byline">Ilgiz Satkynov · Baian Abdyrasulova · Ivan Krutchenko</p>
+      </div>
+      <aside class="objective-panel" aria-label="Conceptual overview of the research">
+        <div class="panel-top"><span>THE OBJECTIVE, EXAMINED</span><span aria-hidden="true">01 / 03</span></div>
+        <p class="panel-question">What are we<br>optimizing <em>for?</em></p>
+        <div class="objective-row"><span class="row-number">01</span><div><h2>Engagement</h2><p>Predicted user response</p></div><span class="signal" aria-hidden="true">↗</span></div>
+        <div class="objective-row"><span class="row-number">02</span><div><h2>Content quality</h2><p>Independently estimated merit</p></div><span class="signal" aria-hidden="true">+</span></div>
+        <div class="objective-row"><span class="row-number">03</span><div><h2>Outrage exposure</h2><p>A measurable constraint</p></div><span class="signal" aria-hidden="true">−</span></div>
+        <div class="panel-bottom"><span class="dot"></span> Multiple objectives. Explicit trade-offs.</div>
+      </aside>
+    </section>
+    <div class="topic-strip" aria-label="Research topics"><span>Recommender systems</span><span>Contextual bandits</span><span>Algorithmic auditing</span><span>Responsible AI</span></div>
+
+    <section class="section overview" id="overview" aria-labelledby="overview-title">
+      <div><p class="eyebrow">01 / Research overview</p><h2 id="overview-title">Look beyond<br>the engagement score.</h2></div>
+      <div class="prose"><p class="lead">What should an auditor examine when a recommendation system is designed to maximize engagement?</p><p>This report extends <em>Engagement as Objective</em> into an engineering and auditing specification. It combines predicted engagement, independently estimated content quality, and a moral-emotional outrage indicator in a multi-objective contextual bandit framework.</p><p>It connects fair ranking and constrained learning with an audit protocol for examining disclosed ranking documentation and logged behavior.</p><a class="text-link" href="paper.pdf#page=1">Read the full abstract <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="section" id="framework" aria-labelledby="framework-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / The framework</p><h2 id="framework-title">From objective<br>to accountability.</h2></div><p>Four connected parts turn a research question into an auditable specification.</p></div>
+      <div class="framework-grid">
+        <article class="framework-card"><span class="card-index">01 <span aria-hidden="true">↗</span></span><h3>Specify the reward</h3><p>Bring engagement, quality, and outrage into an explicit multi-objective specification instead of leaving the trade-offs implicit.</p><span class="section-ref">Formal specification · Section 2</span></article>
+        <article class="framework-card"><span class="card-index">02 <span aria-hidden="true">⊞</span></span><h3>Constrain the ranking</h3><p>Use a slate-level rejection rule to limit high-outrage exposure and study the resulting engagement–extremity frontier.</p><span class="section-ref">Ranking filter · Section 4</span></article>
+        <article class="framework-card"><span class="card-index">03 <span aria-hidden="true">⇄</span></span><h3>Examine exploration</h3><p>Compare UCB1 with quality-aware Thompson Sampling, separating engagement regret from cumulative outrage exposure.</p><span class="section-ref">Feedback loops · Section 5</span></article>
+        <article class="framework-card"><span class="card-index">04 <span aria-hidden="true">✓</span></span><h3>Audit the behavior</h3><p>Apply a 22-item checklist across five domains, supported by worked calibration and illustrative scorecard examples.</p><span class="section-ref">Audit protocol · Section 6</span></article>
+      </div>
+    </section>
+
+    <section class="results-section" id="results" aria-labelledby="results-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / Reported findings</p><h2 id="results-title">The trade-off<br>is part of the result.</h2></div><p>Quality-aware Thompson Sampling versus UCB1 in the report’s synthetic experiment.</p></div>
+      <div class="metrics"><article><p class="metric">−21.1<span>%</span></p><h3>Cumulative outrage exposure</h3><p>Lower exposure in the quality-aware variant.</p></article><article><p class="metric">+68.2<span>%</span></p><h3>Cumulative engagement regret</h3><p>A higher regret cost in the same comparison.</p></article></div>
+      <div class="experiment-note"><strong>6,000 rounds · 8 random seeds</strong><p>Reported simulation results, not measurements from deployed platforms. Higher engagement regret is not the same as a percentage decrease in engagement. See Section 5 for the setup and uncertainty bands.</p></div>
+      <a class="text-link" href="paper.pdf#page=13">Explore the simulation analysis <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="section overview limits" aria-labelledby="limits-title"><div><p class="eyebrow">04 / Interpretation</p><h2 id="limits-title">An audit has<br>boundaries.</h2></div><div class="prose"><p class="lead">Internal consistency does not settle which objective a platform should optimize.</p><p>The framework examines whether stated objectives and constraints agree with logged behavior. Its practical usefulness depends on estimator validity, subgroup coverage, suitable documentation, and continued evaluation as content producers adapt.</p><p>This website summarizes the authors’ report. The reported experiments have not been independently reproduced here; the site provides the paper, not an executable reproduction package.</p><a class="text-link" href="paper.pdf#page=22">Read the limitations <span aria-hidden="true">↗</span></a></div></section>
+
+    <section class="section authors-section" id="authors" aria-labelledby="authors-title"><p class="eyebrow">05 / Authors</p><h2 id="authors-title">The people behind the paper.</h2><div class="authors"><article><span class="initials" aria-hidden="true">IS</span><h3>Ilgiz Satkynov</h3><p>De Anza College</p></article><article><span class="initials" aria-hidden="true">BA</span><h3>Baian Abdyrasulova</h3><p>Jefferson Community College</p></article><article><span class="initials" aria-hidden="true">IK</span><h3>Ivan Krutchenko</h3><p>Foothill College</p></article></div><p class="small-note">Affiliations as listed in the report dated August 9, 2026.</p></section>
+
+    <section class="citation-section" id="citation" aria-labelledby="citation-title"><div><p class="eyebrow">Reference this work</p><h2 id="citation-title">Continue the conversation.</h2><p>Read the full technical report for methods, assumptions, worked examples, and references.</p><a class="button primary" href="paper.pdf" download>Download PDF <span aria-hidden="true">↓</span></a></div><details><summary>BibTeX citation <span aria-hidden="true">+</span></summary><pre><code>@techreport{satkynov2026auditing,
+  title = {Auditing the Objective:
+    A Multi-Objective Bandit Framework
+    and Reproducible Audit Protocol for
+    Engagement-Based Recommendation Systems},
+  author = {Satkynov, Ilgiz and
+    Abdyrasulova, Baian and Krutchenko, Ivan},
+  year = {2026},
+  month = aug,
+  type = {Technical report},
+  note = {Technical extension to
+    "Engagement as Objective"}
+}</code></pre></details></section>
+  </main>
+  <footer><a class="footer-brand" href="#">Auditing the Objective.</a><p>Recommendation System Audit · Technical report · 2026</p><a href="#main">Back to top ↑</a></footer>
+</body>
+</html>
