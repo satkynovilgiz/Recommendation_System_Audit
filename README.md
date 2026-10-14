@@ -16,7 +16,7 @@
 
 </div>
 
-## Research Overview!
+## Research Overview
 
 What should an auditor examine when a recommendation system is designed to maximize engagement?
 
