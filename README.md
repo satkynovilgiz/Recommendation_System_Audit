@@ -72,7 +72,7 @@ This README accompanies the technical report. It does not provide an executable 
 | :--- | :--- |
 | **Ilgiz Satkynov** | De Anza College |
 | **Baian Abdyrasulova** | Jefferson Community College |
-| **Ivan Krutchenko** | Foothill College |
+| **Ivan Krutchenko** | Foothill College / De Anza College |
 
 ## Citation
 
